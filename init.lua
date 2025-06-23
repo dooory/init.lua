@@ -1,2 +1,8 @@
-require("dory")
-require("config.lazy")
+require("options")
+
+require("keymaps")
+
+require("lazy-bootstrap")
+
+require("lazy-plugins")
+
