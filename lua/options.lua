@@ -19,3 +19,19 @@ vim.opt.mouse = 'a'
 vim.opt.clipboard = "unnamedplus"
 
 vim.o.cursorline = true
+
+vim.api.nvim_create_autocmd('ModeChanged', {
+	pattern = "*:i|R",
+	desc = "Disables relativenumber in insert and replace mode",
+	callback = function()
+		vim.o.relativenumber = false
+	end,
+})
+
+vim.api.nvim_create_autocmd('ModeChanged', {
+	pattern = "i|R:*",
+	desc = "Enables relativenumber when switching from insert-mode to any other mode",
+	callback = function()
+		vim.o.relativenumber = true
+	end,
+})
