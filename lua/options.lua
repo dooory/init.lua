@@ -20,6 +20,8 @@ vim.opt.clipboard = "unnamedplus"
 
 vim.o.cursorline = true
 
+vim.opt.termguicolors = true
+
 vim.api.nvim_create_autocmd('ModeChanged', {
 	pattern = "*:i|R",
 	desc = "Disables relativenumber in insert and replace mode",
