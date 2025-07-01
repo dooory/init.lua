@@ -1,10 +1,12 @@
 return {
-	"lunarvim/darkplus.nvim",
+	"catppuccin/nvim",
+	name = "catppuccin",
 	priority = 1000,
+	opts = {
+		flavour = "mocha",
+		transparent_background = true,
+	},
 	config = function()
-		vim.cmd.colorscheme("darkplus")
-
-		vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+		vim.cmd.colorscheme("catppuccin")
 	end,
 }
