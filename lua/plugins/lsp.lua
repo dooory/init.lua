@@ -7,6 +7,9 @@ return {
 		servers = {
 			lua_ls = {},
 			jsonls = {},
+			ts_ls = {},
+			html = {},
+			cssls = {},
 		},
 	},
 
